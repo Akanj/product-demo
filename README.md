@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+## Objectifs
+L’objectif est de développer 2 pages avec navigation entre elles.
+La première page est une simple fiche produit présentant :
+- nom du produit
+- description
+- 1 image fixe
+- 1 bouton « Ajouter au panier »
+- 1 bouton « Voir mon panier » qui conduit vers la 2e
+page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+La deuxième page est une page permettant de faire un récapitulatif du produit
+ajouté au panier. Elle présente :
+- nom de la page
+- le détail du produit ajouté (image, nom – avec lien vers la fiche produit,
+quantité, actions)
+- les actions pour le produit sont :
+- Supprimer : supprime le produit du panier
+- Ajouter : augmente la quantité de 1
+- Diminuer : baisse la quantité de 1
+- 1 bouton fictif « Commander »
+Attention : si aucun produit n’est ajouté, le récapitulatif doit afficher un simple
+message « Aucun produit dans le panier », et le bouton fictif doit être
+désactivé.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Règles
+Si on ajoute plusieurs fois le produit depuis la fiche produit, la quantité
+augmente de 1 à chaque fois.
+La quantité maximale du produit dans le panier est de 12, l’utilisateur ne doit
+pas pouvoir aller au-dessus.
+Si l’utilisateur diminue la quantité jusqu’à 0, le produit est considéré comme
+supprimé du panier.
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Contraintes techniques
+Vous devez utiliser un framework JS moderne (VueJS, React, Svelte, Angular).
+Pour la partie style, vous devez aussi vous appuyer sur un framework CSS
+(Bootstrap, Tailwind...).
+Vous devez pousser votre code sur un répertoire Github public.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Les plus
+Sans rentrer dans une intégration poussée, il est attendu une certaine
+cohérence de style (couleur des boutons, organisation des pages...).
+Idéalement proposer une persistance du panier (cookies, localStorage).
+Proposer une robustesse du code en passant par un store (Redux, VueStore...).
